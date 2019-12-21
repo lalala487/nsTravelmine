@@ -16,24 +16,23 @@
                 @tap="onDrawerButtonTap"
                 ios.position="left">
             </ActionItem>
-            <Label class="action-bar-title" text="Browse"></Label>
+            <Label class="action-bar-title" text="Settings"></Label>
         </ActionBar>
 
         <GridLayout class="page__content">
-            <Label class="page__content-icon far" text.decode="&#xf1ea;"></Label>
+            <Label class="page__content-icon fas" text.decode="&#xf013;"></Label>
             <Label class="page__content-placeholder" :text="message"></Label>
         </GridLayout>
-
     </Page>
 </template>
 
 <script>
     import * as utils from "~/shared/utils";
-    import SelectedPageService from "../shared/selected-page-service";
+    import SelectedPageService from "~/shared/selected-page-service";
 
     export default {
         mounted() {
-            SelectedPageService.getInstance().updateSelectedPage("Browse");
+            SelectedPageService.getInstance().updateSelectedPage("Settings");
         },
         computed: {
             message() {

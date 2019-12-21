@@ -1,7 +1,7 @@
 import Vue from "nativescript-vue";
-import App from "./components/App";
-import Home from "./components/Home";
-import DrawerContent from "./components/DrawerContent";
+import App from "./components/home/App";
+import Home from "./components/home/Home";
+import DrawerContent from "./components/home/DrawerContent";
 import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 Vue.use(RadSideDrawer);
 
