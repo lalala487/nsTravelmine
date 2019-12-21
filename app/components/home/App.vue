@@ -1,5 +1,5 @@
 <template lang="html">
-  <RadSideDrawer ref="drawer" drawerLocation="Left" gesturesEnabled="true" :drawerTransition="transition">
+  <RadSideDrawer ref="drawer" drawerLocation="Left" v-bind:gesturesEnabled="GlobalStore.isLogin" :drawerTransition="transition">
     <StackLayout ~drawerContent backgroundColor="#ffffff">
       <slot name="drawerContent"></slot>
     </StackLayout>
@@ -10,21 +10,25 @@
 </template>
 
 <script>
-    import { SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
-    
-    export default {
-        data () {
-          return {
-            transition: new SlideInOnTopTransition()
-          }
-        }
+import { SlideInOnTopTransition } from "nativescript-ui-sidedrawer";
+import GlobalStore from "~/services/GlobalStore";
+
+export default {
+  data() {
+    return {
+      GlobalStore,
+      transition: new SlideInOnTopTransition()
+    };
+  },
+  methods: {
   }
+};
 </script>
 
 <style scoped lang="scss">
-    // Start custom common variables
-    @import '~@nativescript/theme/scss/variables/blue';
-    // End custom common variables
+// Start custom common variables
+@import "~@nativescript/theme/scss/variables/blue";
+// End custom common variables
 
-    // Custom styles
+// Custom styles
 </style>
