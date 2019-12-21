@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import Login from "~/components/auth/Login";
 import Home from "./Home";
 import Browse from "./Browse";
 import Featured from "./Featured";
@@ -52,6 +53,7 @@ import Search from "./Search";
 import Settings from "./Settings";
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
+import GlobalStore from '../../services/GlobalStore';
 
 export default {
   mounted() {
@@ -84,17 +86,23 @@ export default {
       utils.closeDrawer();
     },
     onLogout() {
-      alert("asdf");
-      //   this.$backendService.logout();
+      let options = {
+        title: GlobalStore.appName,
+        message: "Do you really want to logout?",
+        okButtonText: "Yes",
+        cancelButtonText: "No",
+      };
+
+      confirm(options).then((result) => {
+				if (!result) return;
+
+				utils.closeDrawer();
+				this.$backendService.logout();
+				this.$navigateTo(Login, {
+					clearHistory: true
+				});
+      });
     }
   }
 };
 </script>
-
-<style scoped lang="scss">
-// Start custom common variables
-@import "~@nativescript/theme/scss/variables/blue";
-// End custom common variables
-
-// Custom styles
-</style>
