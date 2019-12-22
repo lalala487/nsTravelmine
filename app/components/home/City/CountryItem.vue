@@ -18,12 +18,7 @@ import { ImageSource } from "@nativescript/core/image-source";
 export default {
   props: {
     data: {
-      default: {
-        id: null,
-        name: null,
-        image: null,
-        imageSource: "~/images/earth.png"
-      }
+      default: {}
     }
   },
   data() {

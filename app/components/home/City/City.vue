@@ -6,7 +6,7 @@
     </ActionBar>
 
     <ScrollView orientation="vertical">
-      <StackLayout row="1" class="m-t-5">
+      <StackLayout class="m-t-5">
         <SearchBar hint="Type city name" v-model="searchQuery" @textChange="onSearchChanged" />
         <CityItem v-for="item in items" :key="item.id" :data="item" @tap="onItemTap" />
       </StackLayout>
@@ -15,18 +15,12 @@
 </template>
 
 <script>
-import SelectedPageService from "~/shared/selected-page-service";
+import CityDetails from "./CityDetails";
 import CityItem from "./CityItem";
 
 export default {
   props: {
-    country: {
-      default: {
-        id: null,
-        name: null,
-        image: null,
-      }
-    }
+    country: {}
   },
   data() {
     return {
@@ -48,11 +42,12 @@ export default {
     },
     onSearchChanged() {},
     onItemTap(item) {
-      // this.$navigateTo(City, {
-      //   props: {
-      //     country: item
-      //   }
-      // });
+      this.$navigateTo(CityDetails, {
+        props: {
+          country: this.country,
+          city: item
+        }
+      });
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <StackLayout>
-    <card-view margin="10 0" elevation="40" radius="5" @tap="onItemTap">
+    <card-view margin="5 0" elevation="40" radius="5" @tap="onItemTap">
       <GridLayout :height="height" rows="auto, *" :columns="height + ', *'">
         <Image :src="data.imageSource" stretch="aspectFill" rowSpan="2" col="0" class="fas m-r-10" />
         <label

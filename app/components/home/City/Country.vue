@@ -12,7 +12,7 @@
     </ActionBar>
 
     <ScrollView orientation="vertical">
-      <StackLayout row="1" class="m-t-5">
+      <StackLayout class="m-t-5">
         <SearchBar hint="Type country name" v-model="searchQuery" @textChange="onSearchChanged" />
         <CountryItem v-for="item in items" v-bind:key="item.id" :data="item" @tap="onItemTap"/>
       </StackLayout>
