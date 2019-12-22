@@ -28,7 +28,7 @@
 						<Label col="1" text="Flights" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Hotels' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Hotel' ? ' -selected': '')" @tap="onNavigationItemTap(Hotel)">
 						<Label col="0" text.decode="&#xf594;" class="nt-icon fas"></Label>
 						<Label col="1" text="Hotels" class="p-r-10"></Label>
 					</GridLayout>
@@ -59,6 +59,7 @@ import Login from "~/components/auth/Login";
 import Home from "./Home";
 import Country from "./city/Country";
 import Flight from "./flight/Flight";
+import Hotel from "./hotel/Hotel";
 
 import Browse from "./Browse";
 import Featured from "./Featured";
@@ -79,6 +80,7 @@ export default {
 			Home: Home,
 			Country,
 			Flight,
+			Hotel,
 
       Browse: Browse,
       Featured: Featured,
@@ -91,6 +93,7 @@ export default {
 		Home,
 		Country,
 		Flight,
+		Hotel,
 
     Browse,
     Featured,

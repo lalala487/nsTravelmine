@@ -11,6 +11,7 @@ import GlobalStore from './GlobalStore';
 import countrydata from './localdata/country.json';
 import citydata from './localdata/city.json';
 import flightdata from './localdata/flight.json';
+import hoteldata from './localdata/hotel.json';
 
 export default class BackendService {
   isLoggedIn() {
@@ -59,6 +60,12 @@ export default class BackendService {
   getFlightList(cityId) {
     return new Promise((resolve, reject) => {
       setTimeout(() => resolve(flightdata), 500);
+    })
+  }
+
+  getHotelList(cityId) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(hoteldata), 500);
     })
   }
 }
