@@ -6,7 +6,7 @@
 
     <GridLayout rows="*, auto, *, auto" class="m-10">
       <StackLayout row="1">
-        <Image class="m-b-30" horizontalAlignment="center" src="~/images/logo.png"></Image>
+        <Image class="m-b-30 m-x-20" horizontalAlignment="center" src="~/images/logo.png"></Image>
         
         <TextField
           class="input m-b-10"
@@ -47,8 +47,12 @@ import Home from "~/components/home/Home";
 import Register from "~/components/auth/Register";
 import GlobalStore from "~/services/GlobalStore";
 import * as utils from "~/shared/utils";
+import SelectedPageService from "~/shared/selected-page-service";
 
 export default {
+  mounted() {
+    SelectedPageService.getInstance().updateSelectedPage("Login");
+  },
   data() {
     return {
       isLoggingIn: true,

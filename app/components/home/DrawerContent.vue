@@ -13,19 +13,24 @@
 						<Label col="1" text="Home" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Browse' ? ' -selected': '')" @tap="onNavigationItemTap(Browse)">
-						<Label col="0" text.decode="&#xf1ea;" class="nt-icon far"></Label>
-						<Label col="1" text="Browse" class="p-r-10"></Label>
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Cities' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+						<Label col="0" text.decode="&#xf64f;" class="nt-icon fas"></Label>
+						<Label col="1" text="Cities" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Search' ? ' -selected': '')" @tap="onNavigationItemTap(Search)">
-						<Label col="0" text.decode="&#xf002;" class="nt-icon fas"></Label>
-						<Label col="1" text="Search" class="p-r-10"></Label>
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Vacation' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+						<Label col="0" text.decode="&#xf14e;" class="nt-icon fas"></Label>
+						<Label col="1" text="Vacation" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Featured' ? ' -selected': '')" @tap="onNavigationItemTap(Featured)">
-						<Label col="0" text.decode="&#xf005;" class="nt-icon fas"></Label>
-						<Label col="1" text="Featured" class="p-r-10"></Label>
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Flights' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+						<Label col="0" text.decode="&#xf5b0;" class="nt-icon fas"></Label>
+						<Label col="1" text="Flights" class="p-r-10"></Label>
+					</GridLayout>
+
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Hotels' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+						<Label col="0" text.decode="&#xf594;" class="nt-icon fas"></Label>
+						<Label col="1" text="Hotels" class="p-r-10"></Label>
 					</GridLayout>
 		
 					<StackLayout class="hr"></StackLayout>
@@ -35,8 +40,13 @@
 						<Label col="1" text="Settings" class="p-r-10"></Label>
 					</GridLayout>
 
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Profile' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+						<Label col="0" text.decode="&#xf4fe;" class="nt-icon fas"></Label>
+						<Label col="1" text="Profile" class="p-r-10"></Label>
+					</GridLayout>
+
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item'" @tap="onLogout()">
-						<Label col="0" text.decode="&#xf013;" class="nt-icon fas"></Label>
+						<Label col="0" text.decode="&#xf2f5;" class="nt-icon fas"></Label>
 						<Label col="1" text="Logout" class="p-r-10"></Label>
 					</GridLayout>
 				</StackLayout>
