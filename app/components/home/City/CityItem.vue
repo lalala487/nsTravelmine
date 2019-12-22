@@ -2,7 +2,7 @@
   <StackLayout>
     <card-view margin="10 0" elevation="40" radius="5" @tap="onItemTap">
       <GridLayout :height="height" rows="auto, *" :columns="height + ', *'">
-        <Image v-bind:src="flagSource" stretch="aspectFill" rowSpan="2" col="0" class="fas m-r-10" />
+        <Image :src="data.imageSource" stretch="aspectFill" rowSpan="2" col="0" class="fas m-r-10" />
         <label
           :text="data.name"
           class="h2 font-weight-bold m-y-10"
@@ -26,13 +26,13 @@ export default {
       default: {
         id: null,
         name: null,
-        image: null
+        image: null,
+        imageSource: "~/images/city.png"
       }
     }
   },
   data() {
     return {
-      flagSource: "~/images/city.png"
     };
   },
   components: {},
@@ -46,9 +46,13 @@ export default {
       this.$emit("tap", this.data);
     }
   },
+  // beforeMount() {
+  //   if (this.data.imageSource == undefined)
+  //     this.data.imageSource = "~/images/city.png";
+  // },
   mounted() {
     ImageSource.fromUrl(this.data.image).then(source => {
-      this.flagSource = source;
+      this.data.imageSource = source;
       this.$forceUpdate();
     });
   }

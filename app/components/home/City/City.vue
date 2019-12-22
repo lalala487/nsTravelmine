@@ -24,7 +24,7 @@ export default {
       default: {
         id: null,
         name: null,
-        image: null
+        image: null,
       }
     }
   },
