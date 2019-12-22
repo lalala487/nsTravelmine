@@ -4,6 +4,7 @@
       <GridLayout :height="height" rows="auto, auto, auto" :columns="height + ', *, auto'" class="m-10">
         <Image :src="data.imageSource" stretch="aspectFit" rowSpan="4" col="0" class="fas m-r-10"/>
         <label :text="data.name" class="h2 font-weight-bold" textWrap="true" row="0" col="1" />
+        
         <StackLayout row="0" col="2" orientation="horizontal">
           <Label text.decode="&#xf155;" class="nt-icon fas m-r-5 text-primary"></Label>
           <label :text="data.price" class="h4 text-primary font-weight-bold" textWrap="true"/>

@@ -24,7 +24,7 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 import FlightItem from "./FlightItem";
-// import City from "./City";
+import FlightDetails from "./FlightDetails";
 
 export default {
   data() {
@@ -48,11 +48,11 @@ export default {
     onSearchChanged() {
     },
     onItemTap(item) {
-      // this.$navigateTo(City, {
-      //   props: {
-      //     country: item
-      //   }
-      // });
+      this.$navigateTo(FlightDetails, {
+        props: {
+          data: item
+        }
+      });
     }
   }
 };
