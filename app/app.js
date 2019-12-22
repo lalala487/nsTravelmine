@@ -1,4 +1,9 @@
 import Vue from "nativescript-vue";
+import * as platform from 'platform';
+if (platform.isIOS) {
+  GMSServices.provideAPIKey("AIzaSyA5FWMYmB575N_BA_2WeAFK5lGfNufRJ8c")
+}
+
 import App from "./components/home/App";
 import Login from "./components/auth/Login";
 import Home from "./components/home/Home";
@@ -11,10 +16,8 @@ import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 
 Vue.use(RadSideDrawer);
 // Vue.use(CardView);
-Vue.registerElement(
-  'CardView',
-  () => require('@nstudio/nativescript-cardview').CardView
-);
+Vue.registerElement('CardView', () => require('@nstudio/nativescript-cardview').CardView);
+Vue.registerElement('MapView', () => require('nativescript-google-maps-sdk').MapView);
 
 const backendService = new BackendService();
 Vue.prototype.$backendService = backendService;

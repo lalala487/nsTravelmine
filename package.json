@@ -15,6 +15,7 @@
     "@nativescript/theme": "~2.2.1",
     "@nstudio/nativescript-cardview": "^1.0.0",
     "kinvey-nativescript-sdk": "^4.2.5",
+    "nativescript-google-maps-sdk": "^2.9.0",
     "nativescript-ui-sidedrawer": "~8.0.0",
     "nativescript-vue": "~2.4.0",
     "rxjs": "^6.4.0",

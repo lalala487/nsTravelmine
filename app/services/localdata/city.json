@@ -7,8 +7,8 @@
     "description": "Las Vegas, officially the City of Las Vegas and often known simply as Vegas, is the 28th-most populated city in the United States, the most populated city in the state of Nevada, and the county seat of Clark County.",
     "hotelCount": 10,
     "location": {
-      "latitude": "36.1699",
-      "longitude": "115.1398"
+      "latitude": 36.1699,
+      "longitude": -115.1398
     },
     "flight": "1h 15 min flight, from UK"
   },
@@ -20,8 +20,8 @@
     "description": "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
     "hotelCount": 99,
     "location": {
-      "latitude": "34.0522",
-      "longitude": "118.2437"
+      "latitude": 34.0522,
+      "longitude": -118.2437
     },
     "flight": "2h 15 min flight, from UK"
   },
@@ -33,8 +33,8 @@
     "description": "Las Vegas, officially the City of Las Vegas and often known simply as Vegas, is the 28th-most populated city in the United States, the most populated city in the state of Nevada, and the county seat of Clark County.",
     "hotelCount": 10,
     "location": {
-      "latitude": "36.1699",
-      "longitude": "115.1398"
+      "latitude": 36.1699,
+      "longitude": -115.1398
     },
     "flight": "1h 15 min flight, from UK"
   },
@@ -46,8 +46,8 @@
     "description": "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
     "hotelCount": 99,
     "location": {
-      "latitude": "34.0522",
-      "longitude": "118.2437"
+      "latitude": 34.0522,
+      "longitude": -118.2437
     },
     "flight": "2h 15 min flight, from UK"
   },
@@ -59,8 +59,8 @@
     "description": "Las Vegas, officially the City of Las Vegas and often known simply as Vegas, is the 28th-most populated city in the United States, the most populated city in the state of Nevada, and the county seat of Clark County.",
     "hotelCount": 10,
     "location": {
-      "latitude": "36.1699",
-      "longitude": "115.1398"
+      "latitude": 36.1699,
+      "longitude": -115.1398
     },
     "flight": "1h 15 min flight, from UK"
   },
@@ -72,8 +72,8 @@
     "description": "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
     "hotelCount": 99,
     "location": {
-      "latitude": "34.0522",
-      "longitude": "118.2437"
+      "latitude": 34.0522,
+      "longitude": -118.2437
     },
     "flight": "2h 15 min flight, from UK"
   }
