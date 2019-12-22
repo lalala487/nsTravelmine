@@ -30,13 +30,17 @@ export default {
       items: [
         {
           id: 1,
-          name: "France",
-          image: "adf"
+          name: "United State",
+          image: "http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-Download-PNG.png",
+          description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          cityCount: 20
         },
         {
           id: 2,
-          name: "United State",
-          image: "adfsadfsdf"
+          name: "France",
+          image: "http://www.pngall.com/wp-content/uploads/2016/06/France-Flag-Free-Download-PNG.png",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          cityCount: 10,
         }
       ]
     }

@@ -7,7 +7,14 @@ import DrawerContent from "./components/home/DrawerContent";
 import BackendService from "./services/BackendService";
 
 import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
+// import { CardView } from "@nstudio/nativescript-cardview";
+
 Vue.use(RadSideDrawer);
+// Vue.use(CardView);
+Vue.registerElement(
+  'CardView',
+  () => require('@nstudio/nativescript-cardview').CardView
+);
 
 const backendService = new BackendService();
 Vue.prototype.$backendService = backendService;

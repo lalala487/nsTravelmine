@@ -20,7 +20,7 @@ export default class BackendService {
       setTimeout(() => {
         GlobalStore.isLogin = true;
         resolve();
-      }, 1000);
+      }, 100);
     });
     // return Kinvey.User.login(user.email, user.password);
   }
