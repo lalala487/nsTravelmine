@@ -24,7 +24,7 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 import HotelItem from "./HotelItem";
-// import FlightDetails from "./FlightDetails";
+import HotelDetails from "./HotelDetails";
 
 export default {
   data() {
@@ -48,11 +48,11 @@ export default {
     onSearchChanged() {
     },
     onItemTap(item) {
-      // this.$navigateTo(FlightDetails, {
-      //   props: {
-      //     data: item
-      //   }
-      // });
+      this.$navigateTo(HotelDetails, {
+        props: {
+          data: item
+        }
+      });
     }
   }
 };
