@@ -13,17 +13,17 @@
 						<Label col="1" text="Home" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(CityCountry)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
 						<Label col="0" text.decode="&#xf64f;" class="nt-icon fas"></Label>
 						<Label col="1" text="Cities" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Vacation' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+					<!-- <GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Vacation' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
 						<Label col="0" text.decode="&#xf14e;" class="nt-icon fas"></Label>
 						<Label col="1" text="Vacation" class="p-r-10"></Label>
-					</GridLayout>
+					</GridLayout> -->
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Flights' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Flight' ? ' -selected': '')" @tap="onNavigationItemTap(Flight)">
 						<Label col="0" text.decode="&#xf5b0;" class="nt-icon fas"></Label>
 						<Label col="1" text="Flights" class="p-r-10"></Label>
 					</GridLayout>
@@ -57,7 +57,8 @@
 <script>
 import Login from "~/components/auth/Login";
 import Home from "./Home";
-import CityCountry from "./City/Country";
+import Country from "./city/Country";
+import Flight from "./flight/Flight";
 
 import Browse from "./Browse";
 import Featured from "./Featured";
@@ -76,7 +77,8 @@ export default {
   data() {
     return {
 			Home: Home,
-			CityCountry,
+			Country,
+			Flight,
 
       Browse: Browse,
       Featured: Featured,
@@ -87,7 +89,8 @@ export default {
   },
   components: {
 		Home,
-		CityCountry,
+		Country,
+		Flight,
 
     Browse,
     Featured,
