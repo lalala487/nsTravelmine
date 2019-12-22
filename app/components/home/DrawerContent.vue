@@ -13,7 +13,7 @@
 						<Label col="1" text="Home" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Cities' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(CityCountry)">
 						<Label col="0" text.decode="&#xf64f;" class="nt-icon fas"></Label>
 						<Label col="1" text="Cities" class="p-r-10"></Label>
 					</GridLayout>
@@ -57,6 +57,8 @@
 <script>
 import Login from "~/components/auth/Login";
 import Home from "./Home";
+import CityCountry from "./City/Country";
+
 import Browse from "./Browse";
 import Featured from "./Featured";
 import Search from "./Search";
@@ -73,7 +75,9 @@ export default {
   },
   data() {
     return {
-      Home: Home,
+			Home: Home,
+			CityCountry,
+
       Browse: Browse,
       Featured: Featured,
       Search: Search,
@@ -82,7 +86,9 @@ export default {
     };
   },
   components: {
-    Home,
+		Home,
+		CityCountry,
+
     Browse,
     Featured,
     Search,

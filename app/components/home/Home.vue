@@ -12,7 +12,7 @@
     </ActionBar>
 
     <StackLayout row="1" class="m-t-5">
-      <Label class="h3 font-weight-bold m-l-5 m-b-3" text="Cities"/>
+      <Label class="h3 font-weight-bold m-x-20 m-b-3" text="Cities"/>
     </StackLayout>
   </Page>
 </template>
