@@ -8,6 +8,7 @@
 //     appSecret: "09282985d7c540f7b076a9c7fd884c77"
 // });
 import GlobalStore from './GlobalStore';
+import countrydata from './localdata/country.json';
 
 export default class BackendService {
   isLoggedIn() {
@@ -39,5 +40,11 @@ export default class BackendService {
       resolve();
     });
     // return Kinvey.User.signup({ username: user.email, password: user.password });
+  }
+
+  getCountryList() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(countrydata), 500);
+    })
   }
 }
