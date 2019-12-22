@@ -44,7 +44,7 @@
           v-model="user.password"
           returnKeyType="done"/>
 
-        <ActivityIndicator rowspan="3" :busy="processing"></ActivityIndicator>
+        <ActivityIndicator rowSpan="3" :busy="processing"></ActivityIndicator>
         
         <Button
           text="Sign Up"

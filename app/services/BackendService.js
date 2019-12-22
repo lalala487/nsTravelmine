@@ -9,6 +9,7 @@
 // });
 import GlobalStore from './GlobalStore';
 import countrydata from './localdata/country.json';
+import citydata from './localdata/city.json';
 
 export default class BackendService {
   isLoggedIn() {
@@ -45,6 +46,12 @@ export default class BackendService {
   getCountryList() {
     return new Promise((resolve, reject) => {
       setTimeout(() => resolve(countrydata), 500);
+    })
+  }
+
+  getCityList(countryId) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(citydata), 500);
     })
   }
 }

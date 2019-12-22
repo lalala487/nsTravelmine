@@ -14,7 +14,7 @@
     <ScrollView orientation="vertical">
       <StackLayout row="1" class="m-t-5">
         <SearchBar hint="Type country name" v-model="searchQuery" @textChange="onSearchChanged" />
-        <CountryItem v-for="item in items" v-bind:key="item.id" :data="item" />
+        <CountryItem v-for="item in items" v-bind:key="item.id" :data="item" @tap="onItemTap"/>
       </StackLayout>
     </ScrollView>
   </Page>
@@ -24,6 +24,7 @@
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 import CountryItem from "./CountryItem";
+import City from "./City";
 
 export default {
   data() {
@@ -38,6 +39,7 @@ export default {
   async mounted() {
     SelectedPageService.getInstance().updateSelectedPage("City");
     this.items = await this.$backendService.getCountryList();
+    this.$forceUpdate();
   },
   computed: {},
   methods: {
@@ -45,7 +47,13 @@ export default {
       utils.showDrawer();
     },
     onSearchChanged() {
-      alert(this.searchQuery);
+    },
+    onItemTap(item) {
+      this.$navigateTo(City, {
+        props: {
+          country: item
+        }
+      });
     }
   }
 };
