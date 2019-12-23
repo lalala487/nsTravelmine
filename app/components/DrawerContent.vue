@@ -18,11 +18,6 @@
 						<Label col="1" text="Cities" class="p-r-10"></Label>
 					</GridLayout>
 
-					<!-- <GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Vacation' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
-						<Label col="0" text.decode="&#xf14e;" class="nt-icon fas"></Label>
-						<Label col="1" text="Vacation" class="p-r-10"></Label>
-					</GridLayout> -->
-
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Flight' ? ' -selected': '')" @tap="onNavigationItemTap(Flight)">
 						<Label col="0" text.decode="&#xf5b0;" class="nt-icon fas"></Label>
 						<Label col="1" text="Flights" class="p-r-10"></Label>
@@ -55,7 +50,7 @@
 </template>
 
 <script>
-import Login from "~/components/auth/Login";
+import Login from "./auth/Login";
 import Vacation from "./Vacation";
 import Country from "./city/Country";
 import Flight from "./flight/Flight";
@@ -66,7 +61,7 @@ import TermsCondition from "./TermsCondition";
 
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
-import GlobalStore from '../../services/GlobalStore';
+import GlobalStore from '~/services/GlobalStore';
 
 export default {
   mounted() {

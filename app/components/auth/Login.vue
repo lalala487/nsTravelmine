@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import Vacation from "~/components/home/Vacation";
+import Vacation from "~/components/Vacation";
 import Register from "~/components/auth/Register";
 import GlobalStore from "~/services/GlobalStore";
 import * as utils from "~/shared/utils";

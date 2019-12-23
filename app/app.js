@@ -4,10 +4,10 @@ if (platform.isIOS) {
   GMSServices.provideAPIKey("AIzaSyA5FWMYmB575N_BA_2WeAFK5lGfNufRJ8c")
 }
 
-import App from "./components/home/App";
+import App from "./components/App";
 import Login from "./components/auth/Login";
-import Vacation from "./components/home/Vacation";
-import DrawerContent from "./components/home/DrawerContent";
+import Vacation from "./components/Vacation";
+import DrawerContent from "./components/DrawerContent";
 
 import BackendService from "./services/BackendService";
 
