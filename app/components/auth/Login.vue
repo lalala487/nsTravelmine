@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import Home from "~/components/home/Home";
+import Vacation from "~/components/home/Vacation";
 import Register from "~/components/auth/Register";
 import GlobalStore from "~/services/GlobalStore";
 import * as utils from "~/shared/utils";
@@ -82,7 +82,7 @@ export default {
         .then(() => {
           this.processing = false;
 
-          this.$navigateTo(Home, {
+          this.$navigateTo(Vacation, {
             clearHistory: true
           });
         })

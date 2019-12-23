@@ -8,7 +8,7 @@
         @tap="onDrawerButtonTap"
         ios.position="left"
       ></ActionItem>
-      <Label class="action-bar-title" text="Home"></Label>
+      <Label class="action-bar-title" text="Vacation"></Label>
     </ActionBar>
 
     <StackLayout row="1" class="m-t-5">
@@ -23,7 +23,7 @@ import SelectedPageService from "~/shared/selected-page-service";
 
 export default {
   mounted() {
-    SelectedPageService.getInstance().updateSelectedPage("Home");
+    SelectedPageService.getInstance().updateSelectedPage("Vacation");
   },
   computed: {
   },

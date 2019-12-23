@@ -39,8 +39,10 @@ export default class BackendService {
 
   register(user) {
     return new Promise((resolve, reject) => {
-      GlobalStore.isLogin = true;
-      resolve();
+      setTimeout(() => {
+        GlobalStore.isLogin = true;
+        resolve();
+      }, 100);
     });
     // return Kinvey.User.signup({ username: user.email, password: user.password });
   }

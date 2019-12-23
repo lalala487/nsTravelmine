@@ -8,14 +8,14 @@
     <GridLayout rows="*, auto, *, auto" class="m-10">
       <StackLayout row="1">
         
-        <TextField
+        <!-- <TextField
           class="input m-b-10"
           keyboardType="name"
           autocorrect="false"
           autocapitalizationType="none"
           hint="Username"
           v-model="user.name"
-          returnKeyType="next"/>
+          returnKeyType="next"/> -->
 
         <TextField
           class="input m-b-10"
@@ -41,7 +41,7 @@
           autocapitalizationType="none"
           secure="true"
           hint="Password"
-          v-model="user.password"
+          v-model="user.conformPassword"
           returnKeyType="done"/>
 
         <ActivityIndicator rowSpan="3" :busy="processing"></ActivityIndicator>
@@ -64,6 +64,7 @@
 import GlobalStore from '~/services/GlobalStore';
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
+import Vacation from "~/components/home/Vacation";
 
 export default {
   mounted() {
@@ -74,9 +75,9 @@ export default {
       isLoggingIn: true,
       processing: false,
       user: {
-        name: "vuejs",
         email: "vue@nativescript.org",
         password: "vue",
+        conformPassword: "vue"
       }
     };
   },
@@ -91,6 +92,20 @@ export default {
       }
 
       this.processing = true;
+      this.$backendService
+        .register(this.user)
+        .then(() => {
+          this.processing = false;
+
+          this.$navigateTo(Vacation, {
+            clearHistory: true
+          });
+        })
+        .catch(e => {
+          console.log(e);
+          this.processing = false;
+          this.alert("Unfortunately we could not register your account.");
+        });
     },
   }
 };

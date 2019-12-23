@@ -15,7 +15,7 @@
       <StackLayout class="m-t-10">
         <Image class="m-b-30 m-x-20" horizontalAlignment="center" src="~/images/logo.png"></Image>
         
-        <Label :text="content" textWrap="true" class="m-x-20"/>
+        <Label :text="content" textWrap="true" class="h4 m-x-20"/>
       </StackLayout>
     </ScrollView>
   </Page>

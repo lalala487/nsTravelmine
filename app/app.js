@@ -6,7 +6,7 @@ if (platform.isIOS) {
 
 import App from "./components/home/App";
 import Login from "./components/auth/Login";
-import Home from "./components/home/Home";
+import Vacation from "./components/home/Vacation";
 import DrawerContent from "./components/home/DrawerContent";
 
 import BackendService from "./services/BackendService";
@@ -30,7 +30,7 @@ new Vue({
       App,
       [
         h(DrawerContent, { slot: 'drawerContent' }),
-        h(backendService.isLoggedIn() ? Home : Login, { slot: 'mainContent' })
+        h(backendService.isLoggedIn() ? Vacation : Login, { slot: 'mainContent' })
       ]
     );
   }

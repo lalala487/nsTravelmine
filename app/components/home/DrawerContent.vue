@@ -8,9 +8,9 @@
 		
 			<ScrollView row="1" class="nt-drawer__body">
 				<StackLayout>
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Home' ? ' -selected': '')" @tap="onNavigationItemTap(Home)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Vacation' ? ' -selected': '')" @tap="onNavigationItemTap(Vacation)">
 						<Label col="0" text.decode="&#xf015;" class="nt-icon fas"></Label>
-						<Label col="1" text="Home" class="p-r-10"></Label>
+						<Label col="1" text="Vacation" class="p-r-10"></Label>
 					</GridLayout>
 
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
@@ -56,7 +56,7 @@
 
 <script>
 import Login from "~/components/auth/Login";
-import Home from "./Home";
+import Vacation from "./Vacation";
 import Country from "./city/Country";
 import Flight from "./flight/Flight";
 import Hotel from "./hotel/Hotel";
@@ -76,7 +76,7 @@ export default {
   },
   data() {
     return {
-			Home: Home,
+			Vacation,
 			Country,
 			Flight,
 			Hotel,
@@ -87,7 +87,7 @@ export default {
     };
   },
   components: {
-		Home,
+		Vacation,
 		Country,
 		Flight,
 		Hotel,
