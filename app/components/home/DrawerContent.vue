@@ -35,14 +35,14 @@
 		
 					<StackLayout class="hr"></StackLayout>
 
-					<!-- <GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Settings' ? ' -selected': '')" @tap="onNavigationItemTap(Settings)">
-						<Label col="0" text.decode="&#xf013;" class="nt-icon fas"></Label>
-						<Label col="1" text="Settings" class="p-r-10"></Label>
-					</GridLayout> -->
-
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Profile' ? ' -selected': '')" @tap="onNavigationItemTap(Profile)">
 						<Label col="0" text.decode="&#xf4fe;" class="nt-icon fas"></Label>
 						<Label col="1" text="Profile" class="p-r-10"></Label>
+					</GridLayout>
+
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'TermsCondition' ? ' -selected': '')" @tap="onNavigationItemTap(TermsCondition)">
+						<Label col="0" text.decode="&#xf56c;" class="nt-icon fas"></Label>
+						<Label col="1" text="Terms and Condition" class="p-r-10"></Label>
 					</GridLayout>
 
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item'" @tap="onLogout()">
@@ -62,10 +62,8 @@ import Flight from "./flight/Flight";
 import Hotel from "./hotel/Hotel";
 import Settings from "./Settings";
 import Profile from "./Profile";
+import TermsCondition from "./TermsCondition";
 
-/*import Browse from "./Browse";
-import Featured from "./Featured";
-import Search from "./Search";*/
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
 import GlobalStore from '../../services/GlobalStore';
@@ -83,11 +81,8 @@ export default {
 			Flight,
 			Hotel,
 			Profile,
+			TermsCondition,
 
-      // Browse: Browse,
-      // Featured: Featured,
-      // Search: Search,
-      // Settings: Settings,
       selectedPage: ""
     };
   },
@@ -97,11 +92,7 @@ export default {
 		Flight,
 		Hotel,
 		Profile,
-
-    // Browse,
-    // Featured,
-    // Search,
-    // Settings
+		TermsCondition
   },
   methods: {
     onNavigationItemTap(component) {
