@@ -8,16 +8,20 @@
         @tap="onDrawerButtonTap"
         ios.position="left"
       ></ActionItem>
-      <Label class="action-bar-title" text="Settings"></Label>
+      <Label class="action-bar-title" text="Profile"></Label>
     </ActionBar>
 
     <ScrollView orientation="vertical">
-      <StackLayout class="m-t-10">
-        <GridLayout rows="*" columns="*, auto" class="m-x-10">
-          <Label class="h3 bg-danger text-vcenter" lineHeight="50" text="Push Notification bg-danger" col="0"/>
-          <Switch checked="true" col="1"/>
-        </GridLayout>
-        <StackLayout class="hr"/>
+      <StackLayout class="m-t-10 m-x-20">
+				<Image class="nt-drawer__header-image fas t-36 m-y-20" src.decode="font://&#xf2bd;"></Image>
+
+        <Label class="h3" text="UserName"/>
+        <Label class="h3" text="Michle Johnson"/>
+
+        <Label class="h3" text="Email"/>
+        <Label class="h3" text="johnson999@gmail.com"/>
+        
+        <Button class="-primary" text="Change Password"/>
       </StackLayout>
     </ScrollView>
   </Page>
@@ -29,7 +33,7 @@ import SelectedPageService from "~/shared/selected-page-service";
 
 export default {
   mounted() {
-    SelectedPageService.getInstance().updateSelectedPage("Settings");
+    SelectedPageService.getInstance().updateSelectedPage("Profile");
   },
   computed: {
   },
