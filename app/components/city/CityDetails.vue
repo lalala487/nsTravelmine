@@ -25,6 +25,7 @@
         </StackLayout>
 
         <Label text="Hotels" class="h2 m-x-20" />
+        <HotelItem v-for="item in hotelItems" v-bind:key="item.id" :data="item" @tap="onHotelTap"/>
 
         <Label text="Location" class="h2 m-x-20" />
 
@@ -47,6 +48,8 @@
 <script>
 import { ImageSource } from "@nativescript/core/image-source";
 import * as mapsModule from "nativescript-google-maps-sdk";
+import HotelItem from "../hotel/HotelItem";
+import HotelDetails from "../hotel/HotelDetails";
 
 export default {
   props: {
@@ -55,20 +58,32 @@ export default {
   },
   data() {
     return {
-      imageSource: "~/images/logo.png"
+      imageSource: "~/images/logo.png",
+      hotelItems: []
     };
   },
-  components: {},
+  components: {
+    HotelItem
+  },
   async mounted() {
     ImageSource.fromUrl(this.city.image).then(source => {
       this.imageSource = source;
       this.$forceUpdate();
     });
+    
+    this.hotelItems = await this.$backendService.getHotelList();
   },
   computed: {},
   methods: {
     onBack() {
       this.$navigateBack();
+    },
+    onHotelTap(item) {
+      this.$navigateTo(HotelDetails, {
+        props: {
+          data: item
+        }
+      });
     },
     mapReady(args) {
       var mapView = args.object;

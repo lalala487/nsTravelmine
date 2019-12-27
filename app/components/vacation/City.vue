@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import CityDetails from "./CityDetails";
+import CityDetails from "../city/CityDetails";
 import CityItem from "../city/CityItem";
 
 export default {
