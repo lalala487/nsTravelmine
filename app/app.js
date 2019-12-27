@@ -6,7 +6,7 @@ if (platform.isIOS) {
 
 import App from "./components/App";
 import Login from "./components/auth/Login";
-import Vacation from "./components/Vacation";
+import Vacation from "./components/vacation/Vacation";
 import DrawerContent from "./components/DrawerContent";
 
 import BackendService from "./services/BackendService";

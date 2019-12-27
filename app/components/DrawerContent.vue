@@ -13,7 +13,7 @@
 						<Label col="1" text="Vacation" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City Breaks' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
 						<Label col="0" text.decode="&#xf64f;" class="nt-icon fas"></Label>
 						<Label col="1" text="Cities" class="p-r-10"></Label>
 					</GridLayout>
@@ -51,7 +51,7 @@
 
 <script>
 import Login from "./auth/Login";
-import Vacation from "./Vacation";
+import Vacation from "./vacation/Vacation";
 import Country from "./city/Country";
 import Flight from "./flight/Flight";
 import Hotel from "./hotel/Hotel";

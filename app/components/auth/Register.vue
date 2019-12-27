@@ -64,7 +64,7 @@
 import GlobalStore from '~/services/GlobalStore';
 import * as utils from "~/shared/utils";
 import SelectedPageService from "~/shared/selected-page-service";
-import Vacation from "~/components/Vacation";
+import Vacation from "~/components/vacation/Vacation";
 
 export default {
   mounted() {
