@@ -25,7 +25,9 @@
         </StackLayout>
 
         <Label text="Hotels" class="h2 m-x-20" />
-        <HotelItem v-for="item in hotelItems" v-bind:key="item.id" :data="item" @tap="onHotelTap"/>
+        <StackLayout class="m-x-20">
+          <HotelItem v-for="item in hotelItems" v-bind:key="item.id" :data="item" @tap="onHotelTap"/>
+        </StackLayout>
 
         <Label text="Location" class="h2 m-x-20" />
 

@@ -13,9 +13,9 @@
 						<Label col="1" text="Vacation" class="p-r-10"></Label>
 					</GridLayout>
 
-					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City Breaks' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
+					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'City' ? ' -selected': '')" @tap="onNavigationItemTap(Country)">
 						<Label col="0" text.decode="&#xf64f;" class="nt-icon fas"></Label>
-						<Label col="1" text="Cities" class="p-r-10"></Label>
+						<Label col="1" text="City Breaks" class="p-r-10"></Label>
 					</GridLayout>
 
 					<GridLayout columns="auto, *" :class="'nt-drawer__list-item' + (selectedPage === 'Flight' ? ' -selected': '')" @tap="onNavigationItemTap(Flight)">
